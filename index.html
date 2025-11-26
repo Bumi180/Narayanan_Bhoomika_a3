@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Art of Tea Making</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  background-color: #e8dfd0;
+}
+
+#container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #e8dfd0;
+}
+
+nav {
+  text-align: center;
+  padding: 40px 0 30px 0;
+  border-bottom: 1px solid #d4c5b0;
+}
+
+nav a {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #5a4a3a;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0 25px;
+}
+
+nav a:hover {
+  color: #3a3a3a;
+}
+
+#hero {
+  text-align: center;
+  padding: 100px 150px 80px 150px;
+}
+
+#hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 96px;
+  font-weight: 300;
+  color: #3a3a3a;
+  letter-spacing: 15px;
+  margin: 0 0 50px 0;
+  line-height: 1.1;
+}
+
+#hero-subtitle {
+  font-size: 18px;
+  color: #7a6a5a;
+  line-height: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#hero-image {
+  width: 958px;
+  height: 356px;
+  margin: 80px auto 0 auto;
+  display: block;
+  object-fit: cover;
+}
+
+#journey-section {
+  padding: 80px 250px;
+}
+
+#journey-section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: #3a3a3a;
+  text-align: center;
+  letter-spacing: 8px;
+  margin: 0 0 60px 0;
+}
+
+#journey-image {
+  width: 958px;
+  height: 356px;
+  margin: 50px auto;
+  display: block;
+  object-fit: cover;
+}
+
+.quote {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+  font-style: italic;
+  color: #7a6a5a;
+  text-align: center;
+  margin: 60px 0;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.body-text {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.two-column {
+  width: 100%;
+  margin: 80px 0;
+}
+
+.two-column::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-left {
+  width: 50%;
+  float: left;
+}
+
+.col-right {
+  width: 50%;
+  float: right;
+}
+
+.side-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.side-text {
+  padding: 60px;
+  background: #f5f0e8;
+  height: 600px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.side-text h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  color: #3a3a3a;
+  margin: 0 0 30px 0;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.side-text p {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.side-text ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.side-text ul li {
+  font-size: 16px;
+  color: #5a4a3a;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.8;
+}
+
+.side-text ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #c9b896;
+  font-size: 24px;
+}
+
+.full-width-section {
+  background: #f5f0e8;
+  padding: 100px 250px;
+  margin: 80px 0;
+}
+
+.full-width-section h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  text-align: center;
+  color: #3a3a3a;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin: 0 0 50px 0;
+}
+
+.ayurveda-image {
+  width: 70%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto 50px auto;
+  display: block;
+  object-fit: cover;
+}
+
+.three-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.grid-item h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.grid-item p {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+}
+
+.pyramid-section {
+  padding: 80px 250px;
+}
+
+.pyramid-section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: #3a3a3a;
+  text-align: center;
+  letter-spacing: 8px;
+  margin: 0 0 30px 0;
+}
+
+.pyramid-subtitle {
+  text-align: center;
+  font-size: 20px;
+  color: #5a4a3a;
+  margin-bottom: 60px;
+  font-style: italic;
+}
+
+.perfume-image {
+  width: 70%;
+  max-width: 800px;
+  height: auto;
+  margin: 40px auto;
+  display: block;
+  object-fit: cover;
+}
+
+.pyramid-layer {
+  background: #fff;
+  padding: 50px 60px;
+  margin-bottom: 30px;
+  border-left: 6px solid #c9b896;
+}
+
+.pyramid-layer h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  color: #3a3a3a;
+  margin-bottom: 25px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.pyramid-layer p {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.pyramid-layer ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.pyramid-layer ul li {
+  font-size: 16px;
+  color: #5a4a3a;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.8;
+}
+
+.pyramid-layer ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #c9b896;
+  font-size: 20px;
+}
+
+.basics-section {
+  padding: 80px 200px;
+}
+
+.basics-header-image {
+  width: 70%;
+  max-width: 800px;
+  height: auto;
+  margin: 40px auto;
+  display: block;
+  object-fit: cover;
+}
+
+.basics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin: 60px 0;
+  background: #f5f0e8;
+  padding: 80px 60px;
+}
+
+.basics-card h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #3a3a3a;
+}
+
+.basics-card p {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+  margin-bottom: 15px;
+}
+
+.equipment-section {
+  padding: 80px 200px;
+}
+
+.equipment-hero-image {
+  width: 80%;
+  max-width: 900px;
+  height: auto;
+  margin: 40px auto 60px auto;
+  display: block;
+  object-fit: cover;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin: 60px 0;
+}
+
+.equipment-item {
+  text-align: center;
+}
+
+.equipment-item-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.equipment-item h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.equipment-item p {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+}
+
+.process-section {
+  background: #f5f0e8;
+  padding: 80px 250px;
+  margin-top: 60px;
+}
+
+.process-section h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #3a3a3a;
+  letter-spacing: 3px;
+}
+
+.process-section ol {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 20px;
+  color: #5a4a3a;
+  line-height: 2.5;
+  padding-left: 25px;
+}
+
+.process-quote {
+  text-align: center;
+  font-style: italic;
+  margin-top: 40px;
+  color: #7a6a5a;
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 80px 0 60px 0;
+  border-top: 1px solid #d4c5b0;
+  margin-top: 80px;
+}
+
+footer p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  color: #7a6a5a;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#wisdom">Ancient Wisdom</a>
+  <a href="#blending">Blending Philosophy</a>
+  <a href="#basics">Tea Basics</a>
+  <a href="#equipment">Equipment</a>
+</nav>
+
+
+<section id="home">
+  <div id="hero">
+    <h1>THE ART<br>OF<br>TEA MAKING</h1>
+    <p id="hero-subtitle">Tea has been enjoyed for thousands of years in many cultures around the world. Different herbs and spices come from various regions and have been used for their flavors and health benefits.</p>
+  </div>
+  
+ 
+  <img id="hero-image" src="pexels-osmachko-230477.jpg" alt="Tea ceremony">
+  
+  <div id="journey-section">
+    <h2>THE JOURNEY</h2>
+    
+ 
+    <img id="journey-image" src="download.jpg" alt="Tea preparation">
+    
+    <p class="quote">"Steam curled from my mug, and just like that, I was back home."</p>
+    
+    <p class="body-text">I've loved making tea since I was a kid. But when I hit middle school, I slowly drifted toward coffee, and tea got left behind for a while. It wasn't until university that chai made its way back into my daily life. Sharing a cup with Amma and Appa reminded me of home and comfort, two things I didn't realize I was missing until I had a cup again.</p>
+    
+    <p class="body-text">After moving away, I started craving those cozy chai moments, not just the tea, but the way it helped me feel connected. When I wanted to bond with my new roommate, I brewed her a cup of chamomile to help with her sleep. She wasn't really a tea person, but she liked my blend, and we ended up talking late into the night.</p>
+    
+    <p class="body-text">That summer, I started blending my own teas, mostly for digestion and just feeling better in general. Amma and Appa especially loved the fennel tea I made. It became a little ritual in itself. Playing with herbs and flavors, researching, something just for me, comforting, creative, and grounding all at once.</p>
+    
+    <p class="quote">consider this your official nudge to romanticize your tea habits.</p>
+  </div>
+</section>
